@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+// import Card from './Card';
+// import CardList from './CardList';
+// import { robots } from './robots.js';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import 'tachyons';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

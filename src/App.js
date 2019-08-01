@@ -1,26 +1,49 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import CardList from './CardList';
+import Search from './Search';
+import { robots } from './robots';
+import Scrolling from "./Scrolling";
+import './App.css'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            searchText: '',
+            robots: robots,
+        }
+        this.onSearchChange = this.onSearchChange.bind(this);
+    }
+
+    onSearchChange(event) {
+        console.log(event.target.value);
+        const rob = robots;
+        const text = event.target.value.toLowerCase();
+        const filterBots = rob.filter((robot) => {
+            return robot.name.toLowerCase().indexOf(text) !== -1;
+        }
+        )
+        console.log(filterBots);
+
+        this.setState({
+            searchText: event.target.value,
+            robots: filterBots,
+        });
+    }
+
+    render() {
+        return (
+            <div className="tc">
+                <div className="shadow-5">
+                    <h1 className="f1">RoboFriend Finder</h1>
+                    <Search searchChange={this.onSearchChange} />
+                </div>
+                <Scrolling>
+                    <CardList robots={this.state.robots} />
+                </Scrolling>
+            </div>
+        )
+    }
 }
 
 export default App;
