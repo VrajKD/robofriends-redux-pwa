@@ -5,7 +5,7 @@ class Search extends React.Component {
         console.log('Search');
         return (
             <div className="ma2">
-                <input type="text" placeholder="Search here for robots" className="pa3 bw1 br3 b--black-40 bg-washed-blue mb3 tc" onChange={this.props.searchChange} />
+                <input type="text" aria-label="Search for robots by name here" placeholder="Search here for robots" className="pa3 bw1 br3 b--black-40 bg-washed-blue mb3 tc" onChange={this.props.searchChange} />
             </div>
         );
     }
