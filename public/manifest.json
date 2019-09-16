@@ -1,6 +1,7 @@
 {
   "short_name": "RoboFriends",
   "name": "RoboFriends Search App",
+  "background-color": "royalblue",
   "icons": [
     {
       "src": "favicon.ico",
@@ -10,12 +11,12 @@
     {
       "src": "android-chrome-512x512.png",
       "sizes": "512x512",
-      "type": "image/x-icon"
+      "type": "image/png"
     },
     {
       "src": "android-chrome-192x192.png",
       "sizes": "192x192",
-      "type": "image/x-icon"
+      "type": "image/png"
     }
   ],
   "start_url": ".",
