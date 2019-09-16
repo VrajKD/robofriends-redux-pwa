@@ -7,7 +7,7 @@ import { createStore, applyMiddleware, combineReducers } from 'redux';
 // import Card from './Card';
 // import CardList from './CardList';
 // import { robots } from './robots.js';
-import App from './App';
+import App from './container/App';
 import * as serviceWorker from './serviceWorker';
 import 'tachyons';
 import { searchRobots, requestRobots } from './reducers';

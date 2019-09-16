@@ -1,9 +1,9 @@
 import React from 'react';
-import CardList from './CardList';
-import Search from './Search';
+import CardList from '../components/CardList';
+import Search from '../components/Search';
 // import { robots } from './robots';
-import Scrolling from "./Scrolling";
-import Header from './Header';
+import Scrolling from "../components/Scrolling";
+import Header from '../components/Header';
 import './App.css'
 // import AsyncComponent from './AsyncComponent';
 import { connect } from 'react-redux'
