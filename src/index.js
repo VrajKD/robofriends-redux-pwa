@@ -10,7 +10,7 @@ import { createStore, applyMiddleware, combineReducers } from 'redux';
 import App from './container/App';
 import * as serviceWorker from './serviceWorker';
 import 'tachyons';
-import { searchRobots, requestRobots } from './reducers';
+import { searchRobots, requestRobots } from './container/reducers';
 // import { createLogger } from 'redux-logger';
 
 const rootReducer = combineReducers({ searchRobots: searchRobots, requestRobots: requestRobots });
